@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marinus Painting Project Manager</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #203040;
+      line-height: 1.6;
+    }
+    header {
+      padding: 48px 24px;
+      background: #164b3c;
+      color: white;
+      text-align: center;
+    }
+    h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+    main {
+      max-width: 1000px;
+      margin: 32px auto;
+      padding: 0 24px;
+    }
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    article {
+      padding: 24px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #dce3e8;
+    }
+    h2 { color: #164b3c; }
+    footer { padding: 24px; text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Marinus Painting Project Manager</h1>
+    <p>Clear job details from the first visit to the crew work order.</p>
+  </header>
+
+  <main>
+    <h2>Our project workflow</h2>
+    <div class="workflow">
+      <article>
+        <h3>1. Field Capture</h3>
+        <p>Collect customer information, job photos, preparation needs,
+          and painting scope during the site visit.</p>
+      </article>
+
+      <article>
+        <h3>2. Estimates and Customer Approval</h3>
+        <p>Prepare an estimate with selectable options. Customers review
+          the scope, choose their work, and sign online.</p>
+      </article>
+
+      <article>
+        <h3>3. Crew Work Orders</h3>
+        <p>Give the assigned crew clear instructions based on the
+          approved scope of work.</p>
+      </article>
+    </div>
+    <p>This initial homepage introduces the planned application.
+      The workflow features are under development.</p>
+  </main>
+
+  <footer>Marinus Painting · CS 480 Team Project</footer>
+</body>
+</html>
