@@ -147,3 +147,24 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# --- Marinus project additions ---
+
+# IDE settings (each developer keeps their own)
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.sqlite3
+
+# Django local files (uploads must never be committed: they may contain customer photos)
+backend/media/
+backend/staticfiles/

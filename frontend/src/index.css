@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+/* Shared design tokens. Use these (e.g. bg-brand, text-brand-dark) instead of raw colors. */
+@theme {
+  --color-brand: #164b3c;
+  --color-brand-dark: #0f3529;
+  --color-brand-light: #e6f0ec;
+  --color-ink: #203040;
+  --color-surface: #f4f6f8;
+  --color-line: #dce3e8;
+  --color-warning: #b45309;
+  --color-danger: #b91c1c;
+}
+
+body {
+  @apply bg-surface text-ink antialiased;
+}
