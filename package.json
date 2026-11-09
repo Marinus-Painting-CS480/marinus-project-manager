@@ -1,0 +1,25 @@
+{
+  "name": "marinus-project-manager",
+  "version": "1.0.0",
+  "description": "CS 480 team project for managing Marinus Painting job details, estimates, customer approvals, and work orders.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marinus-Painting-CS480/marinus-project-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Marinus-Painting-CS480/marinus-project-manager/issues"
+  },
+  "homepage": "https://github.com/Marinus-Painting-CS480/marinus-project-manager#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.5",
+    "tailwindcss": "^4.3.5"
+  }
+}

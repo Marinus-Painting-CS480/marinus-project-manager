@@ -1,75 +1,209 @@
 <!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./dist/output.css">
+  <!-- Character encoding -->
+  <meta charset = "UTF-8">
+
+  <!-- Makes the website responsive on phones and tablets-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Marinus Painting Project Manager</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #203040;
-      line-height: 1.6;
-    }
-    header {
-      padding: 48px 24px;
-      background: #164b3c;
-      color: white;
-      text-align: center;
-    }
-    h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
-    main {
-      max-width: 1000px;
-      margin: 32px auto;
-      padding: 0 24px;
-    }
-    .workflow {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-    }
-    article {
-      padding: 24px;
-      background: white;
-      border-radius: 12px;
-      border: 1px solid #dce3e8;
-    }
-    h2 { color: #164b3c; }
-    footer { padding: 24px; text-align: center; }
-  </style>
+
+  <!-- Text shown in the browser tab -->
+  <title> Marinus Painting Project Manager</title>
+
 </head>
 <body>
-  <header>
-    <h1>Marinus Painting Project Manager</h1>
-    <p>Clear job details from the first visit to the crew work order.</p>
-  </header>
+<h1 class="text-4xl font-bold text-blue-600 p-8">
+  Tailwind is working!
+</h1>
+<!-- Main application layout -->
+<div class="flex min-h-screen bg-slate-100">
 
-  <main>
-    <h2>Our project workflow</h2>
-    <div class="workflow">
-      <article>
-        <h3>1. Field Capture</h3>
-        <p>Collect customer information, job photos, preparation needs,
-          and painting scope during the site visit.</p>
-      </article>
+  <!-- Sidebar -->
+  <aside class="w-64 bg-slate-900 text-white flex flex-col">
 
-      <article>
-        <h3>2. Estimates and Customer Approval</h3>
-        <p>Prepare an estimate with selectable options. Customers review
-          the scope, choose their work, and sign online.</p>
-      </article>
-
-      <article>
-        <h3>3. Crew Work Orders</h3>
-        <p>Give the assigned crew clear instructions based on the
-          approved scope of work.</p>
-      </article>
+    <!-- Company logo -->
+    <div class="px-6 py-6 border-b border-slate-700">
+      <h2 class="text-xl font-bold">
+        🎨 Marinus Painting
+      </h2>
+      <p class="text-sm text-slate-400 mt-1">
+        Project Manager
+      </p>
     </div>
-    <p>This initial homepage introduces the planned application.
-      The workflow features are under development.</p>
+
+    <!-- Navigation -->
+    <nav class="flex-1 px-4 py-6 space-y-2">
+
+      <a href="#" class="block rounded-lg bg-slate-800 px-4 py-3 font-medium">
+        Dashboard
+      </a>
+
+      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+        Projects
+      </a>
+
+      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+        Estimates
+      </a>
+
+      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+        Work Orders
+      </a>
+
+      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+        Customers
+      </a>
+
+    </nav>
+
+    <!-- Sidebar footer -->
+    <div class="border-t border-slate-700 p-4 text-sm text-slate-400">
+      Marinus Painting © 2026
+    </div>
+
+  </aside>
+
+
+  <!-- Main content -->
+  <main class="flex-1">
+
+    <!-- Top bar -->
+    <header class="flex items-center justify-between border-b border-slate-200 bg-white px-8 py-4">
+
+      <div>
+        <p class="text-sm text-slate-500">Welcome back</p>
+        <h1 class="text-xl font-bold text-slate-800">
+          Dashboard
+        </h1>
+      </div>
+
+      <div class="flex items-center gap-4">
+
+        <!-- Language selector -->
+        <div class="flex rounded-lg border border-slate-200 bg-slate-50 p-1 text-sm">
+          <button class="rounded-md bg-white px-3 py-1 font-medium shadow-sm">
+            EN
+          </button>
+          <button class="px-3 py-1 text-slate-500">
+            ES
+          </button>
+        </div>
+
+        <!-- User profile -->
+        <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-700 font-bold text-white">
+          MI
+        </div>
+
+      </div>
+
+    </header>
+
+
+    <!-- Dashboard content -->
+    <section class="p-8">
+
+      <!-- Introduction -->
+      <div class="mb-8">
+        <h2 class="text-2xl font-bold text-slate-800">
+          Project Overview
+        </h2>
+        <p class="mt-1 text-slate-500">
+          Manage your painting projects, estimates, and work orders in one place.
+        </p>
+      </div>
+
+
+      <!-- Dashboard cards -->
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- Projects card -->
+        <div class="rounded-xl bg-white p-6 shadow-sm border border-slate-200">
+          <p class="text-sm font-medium text-slate-500">
+            Active Projects
+          </p>
+          <p class="mt-3 text-3xl font-bold text-slate-800">
+            12
+          </p>
+          <p class="mt-2 text-sm text-emerald-600">
+            Projects currently in progress
+          </p>
+        </div>
+
+        <!-- Estimates card -->
+        <div class="rounded-xl bg-white p-6 shadow-sm border border-slate-200">
+          <p class="text-sm font-medium text-slate-500">
+            Pending Estimates
+          </p>
+          <p class="mt-3 text-3xl font-bold text-slate-800">
+            5
+          </p>
+          <p class="mt-2 text-sm text-amber-600">
+            Waiting for customer review
+          </p>
+        </div>
+
+        <!-- Work orders card -->
+        <div class="rounded-xl bg-white p-6 shadow-sm border border-slate-200">
+          <p class="text-sm font-medium text-slate-500">
+            Work Orders
+          </p>
+          <p class="mt-3 text-3xl font-bold text-slate-800">
+            8
+          </p>
+          <p class="mt-2 text-sm text-blue-600">
+            Jobs assigned to crews
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- Recent projects section -->
+      <div class="mt-8 rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-slate-800">
+              Recent Projects
+            </h3>
+            <p class="text-sm text-slate-500">
+              A quick look at your latest projects.
+            </p>
+          </div>
+
+          <button class="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800">
+            + New Project
+          </button>
+        </div>
+
+        <!-- Example project -->
+        <div class="mt-6 border-t border-slate-100 pt-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="font-medium text-slate-800">
+                Johnson Residence
+              </p>
+              <p class="text-sm text-slate-500">
+                Interior painting · Salt Lake City
+              </p>
+            </div>
+
+            <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-medium text-amber-700">
+                Estimate Pending
+              </span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer>Marinus Painting · CS 480 Team Project</footer>
+</div>
 </body>
 </html>
