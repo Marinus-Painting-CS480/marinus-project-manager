@@ -172,7 +172,8 @@
             </p>
           </div>
 
-          <button class="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800">
+          <button id="open-intake"
+                  class="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800">
             + New Project
           </button>
         </div>
@@ -202,5 +203,211 @@
   </main>
 
 </div>
+<!-- Job Intake Modal -->
+<div id="intake-modal"
+     class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-900/50">
+
+  <div class="flex min-h-screen items-start justify-center p-6">
+
+    <!-- Modal content -->
+    <div class="w-full max-w-4xl rounded-xl bg-white shadow-xl">
+
+      <!-- Modal header -->
+      <div class="flex items-center justify-between border-b border-slate-200 px-8 py-5">
+
+        <div>
+          <p class="text-sm text-slate-500">Marinus Painting</p>
+          <h2 class="text-2xl font-bold text-slate-800">
+            New Job Intake
+          </h2>
+        </div>
+
+        <!-- Close button -->
+        <button id="close-intake"
+                class="rounded-lg px-3 py-2 text-xl text-slate-500 hover:bg-slate-100">
+          ×
+        </button>
+
+      </div>
+
+      <!-- Form content -->
+      <div class="p-8">
+
+        <p class="mb-8 text-slate-500">
+          Capture the site, the rooms, and the finish.
+        </p>
+
+        <!-- CUSTOMER SECTION -->
+        <section class="mb-10">
+
+          <div class="mb-6 border-t border-slate-400 pt-4">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-slate-700">
+              01 &nbsp; Customer
+            </h3>
+          </div>
+
+          <div class="grid gap-6">
+
+            <div>
+              <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                Customer Name
+              </label>
+
+              <input type="text"
+                     class="mt-2 w-full border-b border-slate-300 py-2 outline-none focus:border-emerald-700"
+                     placeholder="Enter customer name">
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2">
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Phone
+                </label>
+
+                <input type="tel"
+                       class="mt-2 w-full border-b border-slate-300 py-2 outline-none focus:border-emerald-700">
+              </div>
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Email
+                </label>
+
+                <input type="email"
+                       class="mt-2 w-full border-b border-slate-300 py-2 outline-none focus:border-emerald-700">
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- JOB SITE SECTION -->
+        <section class="mb-10">
+
+          <div class="mb-6 border-t border-slate-400 pt-4">
+            <h3 class="text-sm font-bold uppercase tracking-widest text-slate-700">
+              02 &nbsp; Job Site
+            </h3>
+          </div>
+
+          <div class="grid gap-6">
+
+            <div>
+              <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                Job Title
+              </label>
+
+              <input type="text"
+                     class="mt-2 w-full border-b border-slate-300 py-2 outline-none focus:border-emerald-700">
+            </div>
+
+            <div>
+              <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                Site Address
+              </label>
+
+              <input type="text"
+                     class="mt-2 w-full border-b border-slate-300 py-2 outline-none focus:border-emerald-700">
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2">
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Type
+                </label>
+
+                <select class="mt-2 w-full border-b border-slate-300 bg-white py-2 outline-none">
+                  <option>Interior</option>
+                  <option>Exterior</option>
+                  <option>Both</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Estimate Due Date
+                </label>
+
+                <input type="date"
+                       class="mt-2 w-full border-b border-slate-300 py-2 outline-none">
+              </div>
+
+            </div>
+
+            <div class="grid gap-6 md:grid-cols-2">
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Requested Start Date
+                </label>
+
+                <input type="date"
+                       class="mt-2 w-full border-b border-slate-300 py-2 outline-none">
+              </div>
+
+              <div>
+                <label class="text-xs font-medium uppercase tracking-wider text-slate-500">
+                  Requested End Date
+                </label>
+
+                <input type="date"
+                       class="mt-2 w-full border-b border-slate-300 py-2 outline-none">
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ACTION BUTTONS -->
+        <div class="flex justify-end gap-4 border-t border-slate-200 pt-6">
+
+          <button id="cancel-intake"
+                  class="rounded-lg border border-slate-300 px-5 py-2 font-medium text-slate-700 hover:bg-slate-100">
+            Cancel
+          </button>
+
+          <button class="rounded-lg bg-emerald-700 px-5 py-2 font-medium text-white hover:bg-emerald-800">
+            Save Intake
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+  const openIntakeButton = document.getElementById("open-intake");
+  const closeIntakeButton = document.getElementById("close-intake");
+  const cancelIntakeButton = document.getElementById("cancel-intake");
+  const intakeModal = document.getElementById("intake-modal");
+
+  // Open the form
+  openIntakeButton.addEventListener("click", function () {
+    intakeModal.classList.remove("hidden");
+  });
+
+  // Close with the X button
+  closeIntakeButton.addEventListener("click", function () {
+    intakeModal.classList.add("hidden");
+  });
+
+  // Close with the Cancel button
+  cancelIntakeButton.addEventListener("click", function () {
+    intakeModal.classList.add("hidden");
+  });
+</script>
 </body>
 </html>
