@@ -2,6 +2,7 @@
 
 /* Shared design tokens. Use these (e.g. bg-brand, text-brand-dark) instead of raw colors. */
 @theme {
+  --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --color-brand: #164b3c;
   --color-brand-dark: #0f3529;
   --color-brand-light: #e6f0ec;
