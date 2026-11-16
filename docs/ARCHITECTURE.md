@@ -20,7 +20,7 @@ The browser only ever talks to one origin. In development Vite forwards `/api` t
 
 ## Backend (Django + Django Ninja)
 
-**What exists:** `config/api.py` holds the single `NinjaAPI` object with a health check. `apps/accounts` holds the custom `User` model.
+**What exists:** `config/api.py` holds the single `NinjaAPI` object (login required by default). Apps: `accounts` (users, login, roles), `projects` (customers, intake, photos), `estimates` (tiers, estimates, proposals, approvals), `workorders` (work orders, crew, notes), `audit` (audit log). See [API.md](API.md) for the endpoint map.
 
 **Conventions to follow as you build:**
 - **One router per app** in `apps/<app>/api.py`, registered in `config/api.py` with `api.add_router(...)`.
@@ -65,7 +65,11 @@ Customers do **not** have accounts. They use private, unguessable links.
 - Uploaded photos should be stored under `backend/media/` (git-ignored) and served only through permission-checked endpoints, never as public files.
 - Emails print to the backend terminal instead of being sent.
 
+## Production
+
+Django serves the built React app (`frontend/dist`) with WhiteNoise, so production is still one origin. See [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Not decided yet
 
-- Hosting (cPanel vs. a managed host). The app is set up so this only changes configuration.
+- Hosting (cPanel vs. a managed host). The app is set up so this only changes configuration (cPanel uses `backend/passenger_wsgi.py`).
 - Production email provider and photo storage location.

@@ -10,13 +10,19 @@ This repository is a **barebones starting point**: the pieces are installed and 
 - [docs/DATA_MODEL.md](docs/DATA_MODEL.md): tables, built and planned
 - [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md): branches, PRs, reviews
 - [docs/AI_GUIDELINES.md](docs/AI_GUIDELINES.md): rules for AI-assisted coding
+- [docs/API.md](docs/API.md): map of every endpoint
+- [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md): putting the app online
 
 ## What's here
 
 ```
 backend/            Django project
   config/           settings, URLs, and the Ninja API (api.py)
-  apps/accounts/    custom User model (email, name, role, language)
+  apps/accounts/    custom User model, login/logout, role checks
+  apps/projects/    customers, projects, areas, scope items, photos
+  apps/estimates/   quality tiers, estimates, proposals, customer approval
+  apps/workorders/  work orders, crew assignments, change notes
+  apps/audit/       audit log
   tests/            pytest tests
 frontend/           React app (Vite + Tailwind)
   src/App.jsx       placeholder page that checks the backend is reachable
@@ -59,6 +65,7 @@ pip install -r requirements-dev.txt
 cp .env.example .env             # Windows: copy .env.example .env
 python manage.py migrate
 python manage.py createsuperuser # your own local admin account
+python manage.py seed_demo --password demo-pass-123   # optional: demo users + sample job
 python manage.py runserver
 ```
 
