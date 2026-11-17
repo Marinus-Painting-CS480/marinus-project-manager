@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 /* Shared design tokens. Use these (e.g. bg-brand, text-brand-dark) instead of raw colors. */
+
 @theme {
   --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --color-brand: #164b3c;
