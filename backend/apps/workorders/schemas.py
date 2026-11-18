@@ -49,6 +49,25 @@ class ScopeAreaOut(Schema):
     items: list[ScopeLineOut]
 
 
+class CustomerScopeLineOut(Schema):
+    """Scope line for the customer link: no price fields at all."""
+
+    description: str
+    prep: str
+    products: str
+    color: str
+    sheen: str
+    dimensions: str
+    unit: str
+    quantity: str
+    optional: bool
+
+
+class CustomerScopeAreaOut(Schema):
+    area: str
+    items: list[CustomerScopeLineOut]
+
+
 class ExclusionOut(Schema):
     area: str
     description: str
@@ -133,7 +152,7 @@ class CustomerWorkOrderOut(Schema):
     status: WorkOrderStatus
     project: ProjectRefOut
     tier: TierOut
-    scope: list[ScopeAreaOut]
+    scope: list[CustomerScopeAreaOut]
     exclusions: list[ExclusionOut]
     schedule: ScheduleOut
     crew: list[CrewMemberOut]
