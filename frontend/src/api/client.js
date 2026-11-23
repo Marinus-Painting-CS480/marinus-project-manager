@@ -7,6 +7,9 @@
 // - Errors throw an ApiError with the HTTP status and Django Ninja's `detail` message.
 // - Money arrives as strings ("1250.00"); keep it as a string or format it, don't use floats.
 
+// Backend URL from .env (empty = same origin).
+const API_BASE = import.meta.env.VITE_API_URL ?? ''
+
 export class ApiError extends Error {
   constructor(status, detail) {
     super(typeof detail === 'string' ? detail : `Request failed (${status})`)
@@ -25,7 +28,7 @@ let csrfReady = null
 // Call once when the app starts (and before login) so the csrftoken cookie exists.
 export function ensureCsrf() {
   if (!csrfReady) {
-    csrfReady = fetch('/api/auth/csrf', { credentials: 'same-origin' })
+    csrfReady = fetch(`${API_BASE}/api/auth/csrf`, { credentials: 'same-origin' })
   }
   return csrfReady
 }
@@ -44,7 +47,7 @@ export async function apiFetch(path, { method = 'GET', body, headers = {} } = {}
     options.body = JSON.stringify(body)
   }
 
-  const response = await fetch(`/api${path}`, options)
+  const response = await fetch(`${API_BASE}/api${path}`, options)
   if (response.status === 204) return null
 
   const data = await response.json().catch(() => null)
