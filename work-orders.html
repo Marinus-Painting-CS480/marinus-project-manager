@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Orders | Marinus Painting</title>
+    <link href="./dist/output.css" rel="stylesheet">
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="w-64 bg-slate-900 text-white">
+        <div class="border-b border-slate-700 px-6 py-6">
+            <h1 class="text-xl font-bold">🎨 Marinus Painting</h1>
+            <p class="mt-1 text-sm text-slate-400">Project Manager</p>
+        </div>
+
+        <nav class="space-y-2 px-4 py-6">
+            <a href="index.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800">
+                Dashboard
+            </a>
+
+            <a href="projects.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800">
+                Projects
+            </a>
+
+            <a href="estimate.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800">
+                Estimates
+            </a>
+
+            <a href="work-orders.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800">
+                Work Orders
+            </a>
+
+            <a href="#"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800">
+                Customers
+            </a>
+        </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="min-w-0 flex-1">
+
+        <!-- HEADER -->
+        <header class="flex items-center justify-between border-b border-slate-200 bg-white px-8 py-4">
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800">Work Orders</h2>
+                <p class="mt-1 text-sm text-slate-500">
+                    Manage assigned painting jobs and crew instructions
+                </p>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button class="text-sm font-medium text-slate-600">EN</button>
+                <button class="text-sm font-medium text-slate-400">ES</button>
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-700 font-bold text-white">
+                    MI
+                </div>
+            </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <div class="space-y-6 p-8">
+
+            <!-- SUMMARY CARDS -->
+            <section class="grid gap-5 md:grid-cols-3">
+
+                <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <p class="text-sm text-slate-500">Total Work Orders</p>
+                    <p class="mt-2 text-3xl font-bold">8</p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <p class="text-sm text-slate-500">Assigned</p>
+                    <p class="mt-2 text-3xl font-bold text-blue-600">5</p>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <p class="text-sm text-slate-500">Completed</p>
+                    <p class="mt-2 text-3xl font-bold text-emerald-700">3</p>
+                </div>
+
+            </section>
+
+            <!-- WORK ORDER LIST -->
+            <section class="space-y-4">
+
+                <div>
+                    <h3 class="text-xl font-bold">All Work Orders</h3>
+                    <p class="mt-1 text-sm text-slate-500">
+                        Select a work order to view job details, photos, and instructions.
+                    </p>
+                </div>
+
+                <!-- WORK ORDER 1 -->
+                <details open class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+
+                    <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-4 p-6 hover:bg-slate-50">
+                        <div>
+                            <p class="text-sm font-semibold text-emerald-700">WO-2087</p>
+                            <h4 class="mt-1 text-lg font-bold">Smith Residence</h4>
+                            <p class="mt-1 text-sm text-slate-500">
+                                123 Maple Ave · Springfield, CA
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <span class="rounded-full bg-blue-100 px-3 py-1 text-sm font-semibold text-blue-700">
+                                Assigned
+                            </span>
+                            <span class="text-sm text-slate-500">Nov 10–12, 2026</span>
+                            <span class="text-slate-400">▼</span>
+                        </div>
+                    </summary>
+
+                    <div class="border-t border-slate-200 p-6">
+
+                        <!-- JOB DETAILS -->
+                        <div class="grid gap-6 md:grid-cols-2">
+
+                            <div>
+                                <h5 class="font-bold text-slate-800">Job Details</h5>
+
+                                <dl class="mt-4 space-y-3 text-sm">
+                                    <div>
+                                        <dt class="text-slate-500">Work Order ID</dt>
+                                        <dd class="font-semibold">WO-2087</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt class="text-slate-500">Project Type</dt>
+                                        <dd class="font-semibold">Interior & Exterior Painting</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt class="text-slate-500">Assigned Employee</dt>
+                                        <dd class="font-semibold">You</dd>
+                                    </div>
+
+                                    <div>
+                                        <dt class="text-slate-500">Scheduled Dates</dt>
+                                        <dd class="font-semibold">November 10–12, 2026</dd>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <!-- WORK INSTRUCTIONS -->
+                            <div class="rounded-lg bg-slate-50 p-5">
+                                <h5 class="font-bold text-slate-800">Work Instructions</h5>
+
+                                <ol class="mt-4 list-inside list-decimal space-y-3 text-sm text-slate-600">
+                                    <li>Prepare surfaces by cleaning, patching, and sanding as needed.</li>
+                                    <li>Apply two coats of approved paint. Refer to the proposal for colors and sheen.</li>
+                                    <li>Keep the work area clean and protected throughout the job.</li>
+                                </ol>
+                            </div>
+
+                        </div>
+
+                        <!-- JOB PHOTOS -->
+                        <div class="mt-8">
+                            <h5 class="font-bold text-slate-800">Job Photos</h5>
+                            <p class="mt-1 text-sm text-slate-500">
+                                Reference photos for this painting project.
+                            </p>
+
+                            <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+                                <div>
+                                    <img
+                                            src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=600"
+                                            alt="Living room interior reference"
+                                            class="h-48 w-full rounded-lg object-cover">
+                                    <p class="mt-2 text-sm font-medium">Living Room</p>
+                                </div>
+
+                                <div>
+                                    <img
+                                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600"
+                                            alt="Interior painting reference"
+                                            class="h-48 w-full rounded-lg object-cover">
+                                    <p class="mt-2 text-sm font-medium">Interior Reference</p>
+                                </div>
+
+                                <div>
+                                    <img
+                                            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600"
+                                            alt="Exterior house reference"
+                                            class="h-48 w-full rounded-lg object-cover">
+                                    <p class="mt-2 text-sm font-medium">Exterior Reference</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </details>
+
+                <!-- WORK ORDER 2 -->
+                <details class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+
+                    <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-4 p-6 hover:bg-slate-50">
+                        <div>
+                            <p class="text-sm font-semibold text-emerald-700">WO-2088</p>
+                            <h4 class="mt-1 text-lg font-bold">Johnson Residence</h4>
+                            <p class="mt-1 text-sm text-slate-500">
+                                Salt Lake City, Utah
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <span class="rounded-full bg-amber-100 px-3 py-1 text-sm font-semibold text-amber-700">
+                                Pending
+                            </span>
+                            <span class="text-sm text-slate-500">Schedule Pending</span>
+                            <span class="text-slate-400">▼</span>
+                        </div>
+                    </summary>
+
+                    <div class="border-t border-slate-200 p-6">
+                        <div class="grid gap-6 md:grid-cols-2">
+
+                            <div>
+                                <h5 class="font-bold">Job Details</h5>
+                                <dl class="mt-4 space-y-3 text-sm">
+                                    <div>
+                                        <dt class="text-slate-500">Work Order ID</dt>
+                                        <dd class="font-semibold">WO-2088</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Project Type</dt>
+                                        <dd class="font-semibold">Interior Painting</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Assigned Employee</dt>
+                                        <dd class="font-semibold">Not yet assigned</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Scheduled Dates</dt>
+                                        <dd class="font-semibold">Pending confirmation</dd>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <div class="rounded-lg bg-slate-50 p-5">
+                                <h5 class="font-bold">Work Instructions</h5>
+                                <p class="mt-4 text-sm text-slate-600">
+                                    This work order is waiting for scheduling and employee assignment.
+                                    Instructions will be provided before the job begins.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+                <!-- WORK ORDER 3 -->
+                <details class="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+
+                    <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-4 p-6 hover:bg-slate-50">
+                        <div>
+                            <p class="text-sm font-semibold text-emerald-700">WO-2089</p>
+                            <h4 class="mt-1 text-lg font-bold">Anderson Kitchen</h4>
+                            <p class="mt-1 text-sm text-slate-500">
+                                Sandy, Utah
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-4">
+                            <span class="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-700">
+                                Completed
+                            </span>
+                            <span class="text-sm text-slate-500">Nov 15, 2026</span>
+                            <span class="text-slate-400">▼</span>
+                        </div>
+                    </summary>
+
+                    <div class="border-t border-slate-200 p-6">
+                        <div class="grid gap-6 md:grid-cols-2">
+
+                            <div>
+                                <h5 class="font-bold">Job Details</h5>
+                                <dl class="mt-4 space-y-3 text-sm">
+                                    <div>
+                                        <dt class="text-slate-500">Work Order ID</dt>
+                                        <dd class="font-semibold">WO-2089</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Project Type</dt>
+                                        <dd class="font-semibold">Interior Painting</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Status</dt>
+                                        <dd class="font-semibold text-emerald-700">Completed</dd>
+                                    </div>
+                                    <div>
+                                        <dt class="text-slate-500">Completion Date</dt>
+                                        <dd class="font-semibold">November 15, 2026</dd>
+                                    </div>
+                                </dl>
+                            </div>
+
+                            <div class="rounded-lg bg-emerald-50 p-5">
+                                <h5 class="font-bold text-emerald-800">Completion Notes</h5>
+                                <p class="mt-4 text-sm text-emerald-700">
+                                    Painting work completed. Final cleanup and inspection finished.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </details>
+
+            </section>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>

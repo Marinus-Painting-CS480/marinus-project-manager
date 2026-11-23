@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Estimate | Marinus Painting</title>
+
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body class="bg-slate-100 text-slate-800">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+    <aside class="flex w-64 shrink-0 flex-col bg-slate-900 text-white">
+
+        <div class="border-b border-slate-700 px-6 py-6">
+            <h2 class="text-xl font-bold">🎨 Marinus Painting</h2>
+            <p class="mt-1 text-sm text-slate-400">Project Manager</p>
+        </div>
+
+        <nav class="flex-1 space-y-2 px-4 py-6">
+
+            <a href="index.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+                Dashboard
+            </a>
+
+            <a href="projects.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+                Projects
+            </a>
+
+            <a href="estimate.html"
+               class="block rounded-lg bg-slate-800 px-4 py-3 font-medium text-white">
+                Estimates
+            </a>
+
+            <a href="work-orders.html"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+                Work Orders
+            </a>
+
+            <a href="#"
+               class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+                Customers
+            </a>
+
+        </nav>
+
+        <div class="border-t border-slate-700 p-4 text-sm text-slate-400">
+            Marinus Painting © 2026
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="min-w-0 flex-1">
+
+        <!-- TOP BAR -->
+        <header class="flex items-center justify-between border-b border-slate-200 bg-white px-8 py-4">
+
+            <div>
+                <p class="text-sm text-slate-500">Review project details and create an estimate</p>
+                <h1 class="text-xl font-bold text-slate-800">Estimate</h1>
+            </div>
+
+            <div class="flex items-center gap-4">
+
+                <div class="flex rounded-lg border border-slate-200 bg-slate-50 p-1 text-sm">
+                    <button class="rounded-md bg-white px-3 py-1 font-medium shadow-sm">
+                        EN
+                    </button>
+                    <button class="px-3 py-1 text-slate-500">
+                        ES
+                    </button>
+                </div>
+
+                <div class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-700 font-bold text-white">
+                    MI
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ESTIMATE CONTENT -->
+        <section class="p-6 lg:p-8">
+
+            <div class="mx-auto max-w-6xl">
+
+                <!-- PAGE INTRODUCTION -->
+                <div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+
+                    <div>
+                        <h2 class="text-2xl font-bold text-slate-800">
+                            Create Estimate
+                        </h2>
+
+                        <p class="mt-1 text-sm text-slate-600">
+                            Review painting services and calculate the project cost.
+                        </p>
+                    </div>
+
+                    <a href="projects.html"
+                       class="rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50">
+                        Back to Projects
+                    </a>
+
+                </div>
+
+                <!-- PROJECT INFORMATION -->
+                <div class="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+
+                        <div>
+                            <p class="text-sm font-medium text-slate-500">
+                                Project Information
+                            </p>
+
+                            <h3 class="mt-2 text-xl font-bold text-slate-800">
+                                Proj-1042 – Smith Residence
+                            </h3>
+
+                            <p class="mt-1 text-sm text-slate-500">
+                                Interior Painting · 123 Maple Ave
+                            </p>
+                        </div>
+
+                        <span class="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-600">
+                            Draft
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- ESTIMATE ITEMS -->
+                <div class="mt-8 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+
+                    <div class="border-b border-slate-200 px-6 py-5">
+
+                        <h3 class="text-lg font-bold text-slate-800">
+                            Estimate Items
+                        </h3>
+
+                        <p class="mt-1 text-sm text-slate-500">
+                            Painting services and their estimated costs.
+                        </p>
+
+                    </div>
+
+                    <div class="overflow-x-auto">
+
+                        <table class="w-full text-left text-sm">
+
+                            <thead class="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
+
+                            <tr>
+                                <th class="px-6 py-4">Area / Scope</th>
+                                <th class="px-6 py-4">Description</th>
+                                <th class="px-6 py-4 text-right">Amount</th>
+                            </tr>
+
+                            </thead>
+
+                            <tbody class="divide-y divide-slate-100">
+
+                            <tr>
+                                <td class="px-6 py-5 font-medium text-slate-800">
+                                    Living Room
+                                </td>
+
+                                <td class="px-6 py-5 text-slate-600">
+                                    Walls, ceiling, trim
+                                </td>
+
+                                <td class="px-6 py-5 text-right font-medium">
+                                    $850.00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="px-6 py-5 font-medium text-slate-800">
+                                    Bedrooms (2)
+                                </td>
+
+                                <td class="px-6 py-5 text-slate-600">
+                                    Walls, ceiling, doors
+                                </td>
+
+                                <td class="px-6 py-5 text-right font-medium">
+                                    $1,200.00
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="px-6 py-5 font-medium text-slate-800">
+                                    Exterior
+                                </td>
+
+                                <td class="px-6 py-5 text-slate-600">
+                                    Surface preparation and 2 coats
+                                </td>
+
+                                <td class="px-6 py-5 text-right font-medium">
+                                    $3,400.00
+                                </td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- ESTIMATE TOTALS -->
+                <div class="mt-6 flex justify-end">
+
+                    <div class="w-full max-w-md rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+
+                        <h3 class="mb-5 text-lg font-bold text-slate-800">
+                            Estimate Summary
+                        </h3>
+
+                        <div class="space-y-4">
+
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Subtotal</span>
+                                <span class="font-medium text-slate-800">$5,450.00</span>
+                            </div>
+
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-500">Tax (8.25%)</span>
+                                <span class="font-medium text-slate-800">$449.63</span>
+                            </div>
+
+                            <div class="border-t border-slate-200 pt-4">
+
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-slate-800">
+                                        Total Estimate
+                                    </span>
+
+                                    <span class="text-2xl font-bold text-emerald-700">
+                                        $5,899.63
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ACTION BUTTONS -->
+                <div class="mt-8 flex flex-col justify-end gap-3 sm:flex-row">
+
+                    <a href="proposal.html"
+                       class="rounded-lg border border-slate-300 bg-white px-5 py-3 text-center text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                        View as Customer
+                    </a>
+
+                    <button type="button"
+                            onclick="window.location.href='estimate-edit.html'"
+                            class="rounded-lg border border-emerald-700 bg-white px-5 py-3 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+                        Edit Estimate
+                    </button>
+
+                    <button type="button"
+                            class="rounded-lg bg-emerald-700 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-800">
+                        Save Estimate
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>

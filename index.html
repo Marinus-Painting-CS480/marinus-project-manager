@@ -39,15 +39,15 @@
         Dashboard
       </a>
 
-      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+      <a href="projects.html" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
         Projects
       </a>
 
-      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+      <a href="estimate.html" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
         Estimates
       </a>
 
-      <a href="#" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
+      <a href="work-orders.html" class="block rounded-lg px-4 py-3 text-slate-300 hover:bg-slate-800 hover:text-white">
         Work Orders
       </a>
 
@@ -408,6 +408,11 @@
   cancelIntakeButton.addEventListener("click", function () {
     intakeModal.classList.add("hidden");
   });
+
+  // Automatically open the intake modal when coming from Projects
+  if (window.location.hash === "#new-project") {
+    intakeModal.classList.remove("hidden");
+  }
 </script>
 </body>
 </html>
